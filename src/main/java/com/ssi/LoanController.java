@@ -1,5 +1,6 @@
 package com.ssi;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -7,10 +8,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoanController {
-
+	
+	@Autowired
+	private LoanService service;
+	@Autowired
+	private Utility utility;
+	
 	//mapping-for-input-url (show the details.jsp)
 	@RequestMapping("input")
 	public String showInputPage() {
+		utility.show();
 		return "details.jsp";	//it is the name of view we are returning to DispatcherServlet
 	}
 	
@@ -23,8 +30,6 @@ public class LoanController {
 		model.setLoanAmount(amount);
 		model.setTime(time);
 		
-		//call the method of service class to compute installment
-		LoanService service=new LoanService();
 		service.computeInstallment(model);
 		
 		//forward-the-request-to-view (using DispatcherServlet)

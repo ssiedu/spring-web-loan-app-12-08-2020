@@ -1,5 +1,8 @@
 package com.ssi;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class LoanService {
 	//method to compute installment
 	
