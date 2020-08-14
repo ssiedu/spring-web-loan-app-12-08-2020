@@ -29,5 +29,10 @@ public class LoanModel {
 	public void setInstallment(int installment) {
 		this.installment = installment;
 	}
+	@Override
+	public String toString() {
+		return "LoanModel [loanAmount=" + loanAmount + ", time=" + time + ", rate=" + rate + ", installment="
+				+ installment + "]";
+	}
 	
 }

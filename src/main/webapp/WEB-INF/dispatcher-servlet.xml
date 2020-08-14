@@ -15,5 +15,9 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<!-- <bean id="ob" class="com.ssi.Utility"/> -->
 	<!-- <bean id="c1" class="com.ssi.LoanController"/> -->
 	<!-- <bean id="service" class="com.ssi.LoanService"/> -->
-		
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="suffix" value=".jsp"/>
+		<property name="prefix" value="/WEB-INF/views/"/>
+	</bean>	
 </beans>

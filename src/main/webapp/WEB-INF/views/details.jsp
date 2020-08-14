@@ -3,9 +3,11 @@
 <h3>Provide Your Loan Details</h3>
 <hr>
 	<form action="computeinstallment">
-		Loan Amount	<input type="text" name="t1"/>
-		Time Period	<input type="text" name="t2"/>
+		<pre>
+		Loan Amount	<input type="text" name="loanAmount"/>
+		Time Period	<input type="text" name="time"/>
 				<input type="submit" value="Installment?"/>
+		</pre>
 	</form>
 <hr>
 </body>
